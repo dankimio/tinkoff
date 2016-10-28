@@ -1,5 +1,10 @@
+require 'httparty'
+require 'active_support/all'
+require 'tinkoff/base'
+require 'tinkoff/client'
+require 'tinkoff/payment'
 require 'tinkoff/version'
 
 module Tinkoff
-  # Your code goes here...
+  include ActiveSupport::Configurable
 end
