@@ -26,7 +26,7 @@ Configure the gem with the credentials provided by the bank. If you are using Ru
 # config/initializers/tinkoff.rb
 Tinkoff.configure do |config|
   config.terminal_key = 'TerminalKey'
-  config.token = 'Token'
+  config.password = 'Password'
 end
 ```
 
@@ -42,7 +42,7 @@ Tinkoff::Client.init(100, 1, { Email: 'foo@bar.com' })
 Tinkoff::Client.confirm(1)
 
 # Parameters: payment_id, rebill_id, options (hash, optional)
-Tinkoff::Client.charge(1, 1)
+Tinkoff::Client.charge(1, 2)
 
 # Parameters: payment_id, options (hash, optional)
 Tinkoff::Client.cancel(1)
