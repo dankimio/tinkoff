@@ -22,5 +22,13 @@ module Tinkoff
       @original_amount = response['OriginalAmount']
       @new_amount = response['NewAmount']
     end
+
+    def failure?
+      !@success
+    end
+
+    def success?
+      !failure?
+    end
   end
 end
