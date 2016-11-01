@@ -58,6 +58,14 @@ Tinkoff::Client.state(1)
 
 You can view all available options in the [official documentation](https://oplata.tinkoff.ru/documentation/?section=aboutMet).
 
+A notification will be sent to if you provided the URL. You should use it to update the status of your payment / order.
+
+```ruby
+notification = Tinkoff::Notification.new(params)
+order = Order.find(notification.order_id)
+order.update_attribute(:paid, true)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment. To install this gem onto your local machine, run `bundle exec rake install`.
