@@ -1,5 +1,5 @@
 module Tinkoff
-  class Response
+  class Notification
     attr_reader :success, :error_code, :message, :details, :amount,
                 :merchant_email, :merchant_name, :order_id, :payment_id, :tran_date
 
@@ -14,6 +14,14 @@ module Tinkoff
       @order_id = params['OrderId']
       @payment_id = params['PaymentId']
       @tran_date = params['TranDate']
+    end
+
+    def failure?
+      !@success
+    end
+
+    def success?
+      !failure?
     end
   end
 end
