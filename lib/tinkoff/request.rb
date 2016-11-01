@@ -29,7 +29,7 @@ module Tinkoff
     # Params signature
     def token
       values = @params.values.join
-      Digest::SHA256.digest(values)
+      Digest::SHA256.hexdigest(values)
     end
 
     def default_params
