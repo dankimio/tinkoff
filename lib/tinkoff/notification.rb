@@ -1,27 +1,28 @@
 module Tinkoff
   class Notification
-    attr_reader :success, :error_code, :message, :details, :amount,
-                :merchant_email, :merchant_name, :order_id, :payment_id, :tran_date
+    attr_reader :terminal_key, :order_id, :success, :status, :payment_id,
+                :error_code, :amount, :rebill_id, :card_id, :pan, :token
 
     def initialize(params)
-      @success = params['Success']
-      @error_code = params['ErrorCode']
-      @message = params['Message']
-      @details = params['Details']
-      @amount = params['Amount']
-      @merchant_email = params['MerchantEmail']
-      @merchant_name = params['MerchantName']
+      @terminal_key = params['TerminalKey']
       @order_id = params['OrderId']
-      @payment_id = params['PaymentId']
-      @tran_date = params['TranDate']
+      @success = params['Success'] == 'true'
+      @status = params['Status']
+      @payment_id = params['PaymentId'].to_i
+      @error_code = params['ErrorCode']
+      @amount = params['Amount'].to_i
+      @rebill_id = params['RebillId'].to_i
+      @card_id = params['CardId'].to_i
+      @pan = params['Pan']
+      @token = params['Token']
+    end
+
+    def success?
+      @success
     end
 
     def failure?
       !@success
-    end
-
-    def success?
-      !failure?
     end
   end
 end
