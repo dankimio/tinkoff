@@ -1,7 +1,7 @@
 # Tinkoff
 
-[![Build Status](http://img.shields.io/travis/dankimio/tinkoff.svg?style=flat)](https://travis-ci.org/dankimio/tinkoff)
-[![Gem Version](http://img.shields.io/gem/v/tinkoff.svg?style=flat&color=brightgreen)](https://rubygems.org/gems/tinkoff)
+[![Build Status](https://img.shields.io/travis/dankimio/tinkoff.svg?style=flat)](https://travis-ci.org/dankimio/tinkoff)
+[![Gem Version](https://img.shields.io/gem/v/tinkoff.svg?style=flat&color=brightgreen)](https://rubygems.org/gems/tinkoff)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/dankimio/tinkoff/master/LICENSE.txt)
 
 
