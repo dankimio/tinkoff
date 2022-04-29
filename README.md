@@ -40,7 +40,7 @@ Use the client to work with payments.
 ```ruby
 # Parameters: amount (in kopecks), order_id, data, options (hash, optional)
 # data — a hash of arbitrary data (up to 20 pairs), "Email" key is required
-# More info: https://oplata.tinkoff.ru/documentation/?section=Init
+# More info: https://www.tinkoff.ru/kassa/develop/api/payments/init-description/
 Tinkoff::Client.init(100, 1, { Email: 'foo@bar.com' })
 
 # Parameters: payment_id, options (hash, optional)
@@ -56,7 +56,7 @@ Tinkoff::Client.cancel(1)
 Tinkoff::Client.state(1)
 ```
 
-You can view all available options in the [official documentation](https://oplata.tinkoff.ru/documentation/?section=aboutMet).
+You can view all available options in the [official documentation](https://www.tinkoff.ru/kassa/develop/api/payments/).
 
 A notification will be sent to if you provided the URL. You should use it to update the status of your payment / order.
 
