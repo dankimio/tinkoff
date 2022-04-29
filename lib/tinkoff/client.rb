@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Tinkoff
   class Client
     # Инициирует платежную сессию и регистрирует заказ в системе Банка

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Tinkoff
   class Request
     BASE_URL = 'https://securepay.tinkoff.ru/rest/'
@@ -41,7 +43,8 @@ module Tinkoff
 
     # Ключ=значение дополнительных параметров через “|”, например Email=a@test.ru|Phone=+71234567890
     def prepare_data
-      return unless @params[:DATA].present?
+      return if @params[:DATA].to_s.empty?
+
       @params[:DATA] = @params[:DATA].to_query.tr('&', '|')
     end
   end
