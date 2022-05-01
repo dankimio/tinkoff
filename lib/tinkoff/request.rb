@@ -1,6 +1,6 @@
 module Tinkoff
   class Request
-    BASE_URL = 'https://securepay.tinkoff.ru/rest/'
+    BASE_URL = 'https://securepay.tinkoff.ru/rest/'.freeze
 
     def initialize(path, params = {})
       @url = BASE_URL + path
