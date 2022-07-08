@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Tinkoff
   class Notification
     attr_reader :terminal_key, :order_id, :success, :status, :payment_id,

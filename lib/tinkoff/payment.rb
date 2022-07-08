@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Tinkoff
   class Payment
     attr_reader :terminal_key, :amount, :order_id, :success, :status,
