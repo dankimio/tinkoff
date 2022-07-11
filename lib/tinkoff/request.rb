@@ -41,7 +41,7 @@ module Tinkoff
 
     # Ключ=значение дополнительных параметров через “|”, например Email=a@test.ru|Phone=+71234567890
     def prepare_data
-      return unless @params[:DATA].present?
+      return unless @params[:DATA].to_s.empty?
 
       @params[:DATA] = @params[:DATA].to_query.tr('&', '|')
     end
